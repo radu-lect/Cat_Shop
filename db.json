@@ -25,51 +25,51 @@
     "products": [
         {
             "id": 1,
-            "name": "LED display",
-            "description": "Can display 2-lines X 16-characters. Operate with 5V DC.",
-            "price": 92,
+            "name": "Cat",
+            "description": "Just a cat.",
+            "price": 100,
             "author_id": 1,
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/led.jpeg"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/cat.png"
         },
         {
             "id": 2,
-            "name": "Arduino UNO",
-            "description": "Brand new and high quality.",
+            "name": "Italian Cat",
+            "description": "This cat love pizza.",
             "price": 180,
             "author_id": 3,
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/arduino.jpeg"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/italian_cat.png"
         },
         {
             "id": 3,
-            "name": "ESP8266 5V",
-            "description": "This wireless relay is based on the AI-Thinker ESP-01S WIFI module.",
+            "name": "Franch Cat",
+            "description": "Je suis français.",
             "price": 300,
             "author_id": 2,
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/wifi.jpeg"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/franch_cat.png"
         },
         {
             "id": 4,
-            "name": "RGB",
-            "description": "Can make color party.",
-            "price": 92,
+            "name": "American Cat",
+            "description": "A cat and a burger.",
+            "price": 120,
             "author_id": 1,
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/rgb.png"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/american_cat.png"
         },
         {
             "id": 5,
-            "name": "Resistor 10k Ohm",
-            "description": "Can resist the voltage. Super cool.",
-            "price": 180,
+            "name": "British Cat",
+            "description": "This cat loves to drink tea.",
+            "price": 400,
             "author_id": 3,
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/resistor.png"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/british_cat.png"
         },
         {
             "id": 6,
-            "name": "7-Segment Display",
-            "description": "Epic.",
-            "price": 300,
+            "name": "German Cat",
+            "description": "Epic cat.",
+            "price": 280,
             "author_id": 2,
-            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/cart.png"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_shop/main/img/german_cat.png"
         }
     ]
 }
