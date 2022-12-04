@@ -50,7 +50,7 @@
         {
             "id": 4,
             "name": "American Cat",
-            "description": "A cat and a burger."
+            "description": "A cat and a burger.",
             "price": 120,
             "author_id": 1,
             "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/american_cat.png"
