@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Onlin Shop</title>
-
+	   
 
 
 	<link rel="stylesheet" type="text/css" href="style1.css">
@@ -10,26 +10,33 @@
 <body>
 
 
-	<header>
 <!-- menu -->
-	<div class="nav">
-  <input type="checkbox">
-    <span></span>
-    <span></span>
-    <div class="menu">
-      <li><a href="#">home</a></li>
-      <li><a href="#">about</a></li>
-      <li><a href="#">shop</a></li>
-      <li><a href="#">cart</a></li>
-      <li><a href="#">acesori</a></li>
-      <li><a href="#">contactos</a></li>
-    </div>
-</div>
+	<nav >
+<div class="underline"></div>
+<div class="underline"></div>
+<div class="underline"></div>
+	
 
+	<a onClick="ul(0)" href="#"> Home </a>
+	<a onClick="ul(1)" href="#"> Shop </a>
+	<a onClick="ul(2)" href="#"> cart </a>
+	<a onClick="ul(3)" href="#"> ceva  </a>
+	<a onClick="ul(4)" href="#"> Contact </a>
+
+</nav>
 <!-- menu -->
+
+	<header>
+
+
+
 			<h1>Cat Shop</h1>
 
 		<div id="cart">
+			
+<a href="#" class="notification">  
+  <span class="badge" id="notif" >-</span>
+</a>
 			<button id="cart-button" onclick="openCart();">
 				<img src="img/cart.png">
 			</button>
@@ -49,12 +56,31 @@
 	</div>
 </main>
 
-
+<hr>
 <footer>
-	<p>oroginal</p>
+	<div id="bare">
+
+		<a href="#">Termeni si conditiile</a>
+		<p>|</p>
+		<a href="#">Politica site-ului</a>	
+
+	</div>
+		<p>© 2022 Cat-Shop R.Moldova, Inc.</p>
+	
+
+
 </footer>
 
+
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- dupa biblioteca jqeri -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script src="script.js"></script>
 </html>

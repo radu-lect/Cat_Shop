@@ -26,7 +26,7 @@ xhr.onload = function(){
 						
 							<p class='product-desc'><b>Description:</b>${p.description}</p>
 							</div>
-							<button onclick="addProductToCart(${p.id})">Buy</button>
+							<button  onclick="addProductToCart(${p.id})" >Buy</button>
 							
 						`;
 					productsGrid.append(pElem);
@@ -67,7 +67,23 @@ function addProductToCart(id){
 	drawCartProduct();
 
 	localStorage.setItem("cart",JSON.stringify(cart));
+    
+
 }
+
+// function notificare(){
+// 	let btn = document.getElementById('btn_notif');
+// 	let coun = 1;
+
+// 	btn_notif.addEventListener('click', function(){
+// 		coun++;
+// 		console.log(coun);
+// 		document.getElementById("notif").innerHTML = coun;
+// 	});
+// }
+
+
+
 
 
 function drawCartProduct(){
@@ -75,6 +91,7 @@ function drawCartProduct(){
 
 	cartProd.innerHTML = null;
 let sum = 0;
+let coun = 0;
 
 	cart.forEach(function(p){
 		cartProd.innerHTML +=`
@@ -85,12 +102,25 @@ let sum = 0;
 						<hr>`;
 
 			sum += p.price;
+
+			coun ++;
+			console.log(coun);
+	let notif = document.getElementById('notif');
+	notif.style.display = "flex";
+
+
+	
+	notif.innerHTML = coun;
+
+
 	});
 	cartProd.innerHTML += `
 				<p>Total price:${sum}$ </p>
 				<button onclick='buyAll();'> Buy all</button>
 
 				`;
+
+				
 
 }
 
@@ -101,5 +131,21 @@ function buyAll(){
 	cartProd.innerHTML = 'Bani au fost luati, :)';
 
 	localStorage.setItem("cart",'[]');
+
+	notif.innerHTML = "0";
+	notif.style.display = "none";
+
 }
 
+
+
+// menu
+function ul(index) {
+	console.log('click!' + index)
+	
+	var underlines = document.querySelectorAll(".underline");
+
+	for (var i = 0; i < underlines.length; i++) {
+		underlines[i].style.transform = 'translate3d(' + index * 100 + '%,0,0)';
+	}
+}
