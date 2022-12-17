@@ -1,4 +1,4 @@
-let promotion = document.getElementById('products-premium');
+let premium = document.getElementById('products-premium');
 let productsArrayPremium = [];
 let xhrPrem = new XMLHttpRequest();
 let urlPrem = 'https://my-json-server.typicode.com/radu-lect/Cat_Shop';
@@ -10,7 +10,7 @@ xhrPrem.responseType = 'json';
 xhrPrem.onload = function(){
 	let productsPrem = xhrPrem.response;
 	//ce adaugam pe pagina
-	promotion.innerHTML = null;
+	premium.innerHTML = null;
 	productsPrem.forEach(p=>{
 		productsArrayPremium.push(p);
 		let pElemPrem = document.createElement('div');
@@ -29,7 +29,7 @@ xhrPrem.onload = function(){
 							<button    class="btn_buy-premium" >Buy</button>
 							
 						`;
-					promotion.append(pElemPrem);
+					premium.append(pElemPrem);
 
 	})
 }
@@ -74,3 +74,40 @@ xhr.onload = function(){
 	})
 }
 xhr.send();
+
+// promotie
+
+let promotion = document.getElementById('promotie');
+let productsArrayProm = [];
+let xhrProm = new XMLHttpRequest();
+let urlProm = 'https://my-json-server.typicode.com/radu-lect/Cat_Shop';
+//verificarea prin punerea in browser
+// 'https://my-json-server.typicode.com/#nume/#proiect_nume'
+
+xhrProm.open('GET', urlProm+'/promotii');
+xhrProm.responseType = 'json';
+xhrProm.onload = function(){
+	let productsProm = xhrProm.response;
+	//ce adaugam pe pagina
+	promotion.innerHTML = null;
+	productsProm.forEach(p=>{
+		productsArrayProm.push(p);
+		let pElemProm = document.createElement('div');
+		pElemProm.classList.add('product');
+		pElemProm.innerHTML=`
+						<div id="photo-product-div">	
+							<img class="product-photo" src='${p.photo_url}'>
+						</div>	
+							<h2 class="product-name">${p.name}</h2>
+							
+							<div id="product-descriere">
+						
+							<p class='product-desc'><b>Description:</b>${p.description}</p>
+							</div>
+							
+						`;
+					promotion.append(pElemProm);
+
+	})
+}
+xhrProm.send();
