@@ -403,9 +403,8 @@ nav.full {
     align-items: center;
     justify-content: space-between;
 
-    height: 10rem;
+    height: 12rem;
     max-width: 620px;
-    min-width: 480px;
 }
 .premium div{
     padding-right: 10px;
@@ -428,6 +427,8 @@ nav.full {
 #pAndImg img{
     padding-bottom: 20px;
 
+    min-height: 180px;
+    min-width: 110px;
 }
 .products-premium{
    

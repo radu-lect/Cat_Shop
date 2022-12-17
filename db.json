@@ -33,6 +33,63 @@
 
         }
     ],
+      "accesorii":[
+        {
+            "id": 1,
+            "name": "Pizza",
+            "description": "Italiam food.",
+            "price": 80,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/pizza.png"
+
+        },
+        {
+            "id": 2,
+            "name": "Tea",
+            "description": "English drink.",
+            "price": 100,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/tea.png"
+
+        },
+        {
+            "id": 3,
+            "name": "Mono-Glass",
+            "description": "Fansy.",
+            "price": 200,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/glass.png"
+
+        },
+        {
+            "id": 4,
+            "name": "Hamburger",
+            "description": "Food.",
+            "price": 20,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/hamburger.png"
+
+        },
+        {
+            "id": 5,
+            "name": "Beer",
+            "description": "Drink.",
+            "price": 180,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/beer.png"
+
+        },
+        {
+            "id": 4,
+            "name": "Hamburger",
+            "description": "French food.",
+            "price": 200,
+            "author_id": 1,
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/corn.png"
+
+        }
+
+    ],
     "products": [
         {
             "id": 1,

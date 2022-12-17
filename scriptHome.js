@@ -39,6 +39,48 @@ xhrPrem.onload = function(){
 }
 xhrPrem.send();
 
+// accesorii
+let accesorii = document.getElementById('accesorii');
+let productsArrayAces = [];
+let xhrAces = new XMLHttpRequest();
+let urlAces = 'https://my-json-server.typicode.com/radu-lect/Cat_Shop';
+//verificarea prin punerea in browser
+// 'https://my-json-server.typicode.com/#nume/#proiect_nume'
+
+xhrAces.open('GET', urlAces+'/accesorii');
+xhrAces.responseType = 'json';
+xhrAces.onload = function(){
+	let productsAces = xhrAces.response;
+	//ce adaugam pe pagina
+	accesorii.innerHTML = null;
+	productsAces.forEach(p=>{
+		productsArrayAces.push(p);
+		let pElemAces = document.createElement('div');
+		pElemAces.classList.add('premium');
+		pElemAces.innerHTML=`
+					<div id="pAndImg">
+							<p>You need this NOW!</p>
+					
+							<img class="product-photo" src='${p.photo_url}'>
+					</div>
+					<div>	
+							<h2 class="product-name">${p.name}</h2>
+							
+							<div id="product-descriere">
+						<br>
+							<p class='product-price'><b>Price: </b>${p.price}</p>
+						<br>
+						
+							<p class='product-desc'><b>Description:</b>${p.description}</p>
+							</div>
+					</div>		
+						`;
+					accesorii.append(pElemAces);
+
+	})
+}
+xhrAces.send();
+
 
 
 // cat normal
@@ -88,3 +130,5 @@ xhr.send();
         const right = document.querySelector(".products-row");
         right.scrollBy(-250, 0);
       }
+
+
