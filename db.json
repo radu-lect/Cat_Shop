@@ -29,7 +29,11 @@
             "description": "Just a cat but better.",
             "price": 1000,
             "author_id": 1,
+<<<<<<< HEAD
             "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/premiumCat.jpeg"
+=======
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/cat.png"
+>>>>>>> efe29c0d7161aae9ac9c5a39e3f14f372fb0d3e3
 
         }
     ],
