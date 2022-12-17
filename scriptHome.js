@@ -14,7 +14,7 @@ xhrPrem.onload = function(){
 	productsPrem.forEach(p=>{
 		productsArrayPremium.push(p);
 		let pElemPrem = document.createElement('div');
-		pElemPrem.classList.add('product');
+		pElemPrem.classList.add('premium');
 		pElemPrem.innerHTML=`
 						<div id="photo-product-div">	
 							<img class="product-photo" src='${p.photo_url}'>
@@ -93,7 +93,7 @@ xhrProm.onload = function(){
 	productsProm.forEach(p=>{
 		productsArrayProm.push(p);
 		let pElemProm = document.createElement('div');
-		pElemProm.classList.add('product');
+		pElemProm.classList.add('promotie');
 		pElemProm.innerHTML=`
 						<div id="photo-product-div">	
 							<img class="product-photo" src='${p.photo_url}'>
