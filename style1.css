@@ -381,7 +381,156 @@ nav.full {
   color: white;
 }
 
+/*promotie*/
 
+
+/*premium*/
+.premium{
+    /*padding: 20px;*/
+/*    margin-left: -5%;
+    margin-right: 20%;*/
+
+    background: #ffb31a;
+
+    /*box-shadow: 1px 1px 1px 0 #000;*/
+
+    border: 2px solid black ;
+    border-color: #805500;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 10rem;
+    max-width: 620px;
+    min-width: 480px;
+}
+.premium div{
+    padding-right: 10px;
+
+    height: 100%;
+    padding-top: 1rem;
+}
+#pAndImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#pAndImg p{
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+
+}
+#pAndImg img{
+    padding-bottom: 20px;
+
+}
+.products-premium{
+   
+
+}
+
+/*products-row*/
+
+
+.denumirile_shop{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 2rem;
+
+    width: 60%;
+margin-left: 20%;
+margin-right: 20%;
+    /*background: red;*/
+
+    border-bottom: 2px solid #4d4d4d;
+}
+.denumirile_shop:hover{
+    background: rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.products-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    /*width: 800px ;*/
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  border-bottom: 2px solid #4d4d4d;
+}
+.product-row{
+  margin: 5px;
+
+  background:  #d9d9d9 ;
+
+  border-top: 2px solid black;
+  border-color: #4d4d4d;
+
+}
+.products-row::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+.products-row::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.scroll-images{
+   /* padding-left: 5%;
+    padding-right:  5%;*/
+
+}
+
+.cover {
+  /*padding: 0px 30px;*/
+  position: relative;
+
+}
+.btnScroll{
+    min-width: 50px;
+    margin:  20px;
+    min-height: 50px;
+
+    background: white;
+    border: 2px solid black;
+
+
+    border-radius: 0px;
+
+
+}
+.left {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.right {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.products-row::-webkit-scrollbar {
+   -webkit-appearance: none;
+}
 /* -----Responsive----- */
 
 
