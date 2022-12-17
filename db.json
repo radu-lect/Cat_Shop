@@ -25,8 +25,8 @@
     "promotii":[
         {
             "id": 1,
-            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/promotieCat.jpg",
-            
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/promotieCat.png",
+
             "name": "Promotie",
            
             "description": "all you need this year"
