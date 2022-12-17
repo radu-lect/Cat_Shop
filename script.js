@@ -26,7 +26,7 @@ xhr.onload = function(){
 						
 							<p class='product-desc'><b>Description:</b>${p.description}</p>
 							</div>
-							<button  onclick="addProductToCart(${p.id})" >Buy</button>
+							<button   onclick="addProductToCart(${p.id});" class="btn_buy" >Buy</button>
 							
 						`;
 					productsGrid.append(pElem);
@@ -43,19 +43,6 @@ function addProductToCart(id){
 	}
 }
 
-let cartProd = document.getElementById('cart-products');
-let cart = []; //cream tabloul pt cart
-if(localStorage.getItem('cart')) {
-	cart = JSON.parse(localStorage.getItem('cart'));
-	drawCartProduct();
-}
-
-
-function openCart(){
-	cartProd.classList.toggle('hide');
-
-}
-
 //functia pt adaugarea in cart
 
 function addProductToCart(id){
@@ -69,18 +56,24 @@ function addProductToCart(id){
 	localStorage.setItem("cart",JSON.stringify(cart));
     
 
+
 }
 
-// function notificare(){
-// 	let btn = document.getElementById('btn_notif');
-// 	let coun = 1;
+let cartProd = document.getElementById('cart-products');
+let cart = []; //cream tabloul pt cart
+if(localStorage.getItem('cart')) {
+	cart = JSON.parse(localStorage.getItem('cart'));
+	drawCartProduct();
+}
 
-// 	btn_notif.addEventListener('click', function(){
-// 		coun++;
-// 		console.log(coun);
-// 		document.getElementById("notif").innerHTML = coun;
-// 	});
-// }
+
+function openCart(){
+	cartProd.classList.toggle('hide');
+
+}
+
+
+
 
 
 
@@ -93,6 +86,7 @@ function drawCartProduct(){
 let sum = 0;
 let coun = 0;
 
+
 	cart.forEach(function(p){
 		cartProd.innerHTML +=`
 		<div id="product-cart"  >
@@ -103,8 +97,14 @@ let coun = 0;
 
 			sum += p.price;
 
+
+			
 			coun ++;
 			console.log(coun);
+
+
+
+		
 	let notif = document.getElementById('notif');
 	notif.style.display = "flex";
 
@@ -116,14 +116,11 @@ let coun = 0;
 	});
 	cartProd.innerHTML += `
 				<p>Total price:${sum}$ </p>
-				<button onclick='buyAll();'> Buy all</button>
+				<button onclick='buyAll(); '> Buy all</button>
 
 				`;
 
-				
-
 }
-
 
 
 function buyAll(){
@@ -134,18 +131,53 @@ function buyAll(){
 
 	notif.innerHTML = "0";
 	notif.style.display = "none";
-
-}
-
-
-
-// menu
-function ul(index) {
-	console.log('click!' + index)
 	
-	var underlines = document.querySelectorAll(".underline");
-
-	for (var i = 0; i < underlines.length; i++) {
-		underlines[i].style.transform = 'translate3d(' + index * 100 + '%,0,0)';
-	}
 }
+
+
+// notificare
+const deleteBtn_recl = document.getElementById("delete_recl");
+const notification = document.getElementById("notification_anunt");
+const closeBtn = document.getElementById("close");
+let back_notif = document.getElementById("back_inactiv");
+function addNotif_Reclama(){
+
+
+deleteBtn_recl.addEventListener("click", () => {
+  notification.classList.add("notification-show");
+  back_notif.classList.add("back_inactive");
+});
+
+closeBtn.addEventListener("click", () => {
+  notification.classList.remove("notification-show");
+  back_notif.classList.remove("back_inactive");
+
+});
+
+
+}
+
+// const deleteBtn_BAll =document.getElementById("deleteBtn_BAll");
+// const closeBtn_BAll = document.getElementById('closeBtn_BAll');
+// const notification_BAll = document.getElementById("notification_BAll");
+
+
+
+// function addNotif_BuyAll(){
+// 	console.log("merge");
+// 	deleteBtn_BAll.addEventListener("click", () => {
+//   notification_BAll.classList.add("notification-show");
+//   back_notif.classList.add("back_inactive");
+// });
+
+// closeBtn_BAll.addEventListener("click", () => {
+//   notification_BAll.classList.remove("notification-show");
+//   back_notif.classList.remove("back_inactive");
+
+// });
+
+// }
+
+
+
+
