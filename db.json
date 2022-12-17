@@ -22,24 +22,14 @@
             "balance": 0
         }
     ],
-    "promotii":[
-        {
-            "id": 1,
-            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/promotieCat.png",
-
-            "name": "Promotie",
-           
-            "description": "all you need this year"
-        }
-    ],
-    "premiumProd":[
+      "premiumProd":[
         {
             "id": 1,
             "name": "Cat Premium",
             "description": "Just a cat but better.",
             "price": 1000,
             "author_id": 1,
-            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/premiumCat.jpg"
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/premiumCat.png"
 
         }
     ],
