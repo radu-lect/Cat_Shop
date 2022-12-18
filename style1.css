@@ -40,6 +40,10 @@ header {
     justify-content: space-between;
     align-items: center;
 
+
+
+
+
 }
 .reclama_content{
     margin-left: 10rem;
@@ -96,7 +100,7 @@ footer div{
 }
 
 
-#products-grid {
+.products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -137,7 +141,7 @@ button {
     font-size: 1.4rem;
     border-radius: 10px;
     border: none;
-    min-width: 50%;
+    min-width: 100%;
     margin-top: 5px;
 
     background: #80929c;
@@ -284,6 +288,57 @@ button {
     border-radius: 1rem;
 }
 
+/*index text*/
+
+.indexText{
+    background:   #d9b38c;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+    margin-left: 30px;
+
+    width: 50rem;
+    height:250px; 
+
+    /*margin: 20px;*/
+        border-bottom-right-radius: 2rem ;
+    border-bottom-left-radius: 2rem ;
+
+    font-size: 20px;
+
+    min-width: 20rem;
+
+
+}
+.ListDiv{
+    border:2px solid black;
+    border-top:0px solid black;
+
+
+}
+a{
+    color: #003366;
+}
+.indexText ul, li{
+    list-style: none;
+    margin: 10px;
+    font-size: 25px;
+
+
+
+
+}
+.indexText h3{
+    margin: 20px;
+
+}
+
+#flex_mare{
+    display: flex;
+}
+
+
+
 /*menu*/
 
 
@@ -300,13 +355,16 @@ body {
 nav {
     /*position: relative;*/
     white-space: nowrap;
-    background: #d1d1e0;
+    background:  #bfbfbf;
     /*margin: 2em 0;*/
-    box-shadow: 0 1em 2em rgba(black, .05);
-    height: 60px;
+    /*box-shadow: 0 1em 2em rgba(black, .05);*/
+    height: 70px;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
 
     width: 100%;
+
+
 
 }
 
@@ -316,7 +374,7 @@ nav {
 nav a {
     display: inline-block;
     z-index: 10;
-    width: 20%;
+    width: 19% ;
     height: 100%;
     /*padding: 1em 0;*/
     text-align: center;
@@ -324,8 +382,11 @@ nav a {
     color: black;
     padding-top: 1rem;
 }
+#special_nav{
+    width: 41%;
+}
 nav a:hover{
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.1);
     
     transition: 0.2s;
 }
@@ -386,9 +447,6 @@ nav.full {
 
 /*premium*/
 .premium{
-    /*padding: 20px;*/
-/*    margin-left: -5%;
-    margin-right: 20%;*/
 
     background: #ffb31a;
 
@@ -407,7 +465,7 @@ nav.full {
     max-width: 620px;
 }
 .premium div{
-    padding-right: 10px;
+    padding-right: 100px;
 
     height: 100%;
     padding-top: 1rem;
@@ -430,11 +488,42 @@ nav.full {
     min-height: 180px;
     min-width: 110px;
 }
-.products-premium{
-   
+#display-plus{
+    display: flex;
+}
+.products-premium-plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: #ffb31a;
+    height: 200px;
+    height:  100px;
+
+    transform: rotate(-90deg);
+
+
+    border: 2px solid black ;
+    border-color: #805500;
+    border-radius: 10px;
+
+
+    width:  12rem;
+    /*max-height: 620px;*/
+
+    margin-left: -50px;
+    margin-top:  52px;
+
+    font-size: 30px;
 
 }
+.products-premium-plus p{
+   /* transform: rotate(-90deg);
+    font-size: 30px;
 
+    margin-bottom: -400px;*/
+}
 /*products-row*/
 
 .denumirile_shop{
@@ -449,6 +538,15 @@ margin-right: 20%;
     /*background: red;*/
 
     border-bottom: 2px solid #4d4d4d;
+
+    cursor: pointer;
+}
+.denumirile_shopx2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 2rem;
+
 
     cursor: pointer;
 }
@@ -530,14 +628,39 @@ margin-right: 20%;
    -webkit-appearance: none;
 }
 /* -----Responsive----- */
+/*usersName*/
+/*.users-name{
+    display:flex;
+    justify-content: center;
+}
+*/
+.users{
+  
+    margin: 20px;
+}
 
 
-
-@media screen and (max-width: 1000px){
-    #products-grid, #user-products-grid {
+@media screen and (max-width: 1200px){
+    .products-grid, .user-products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    #flex_mare{
+    display: flex;
+    flex-direction: column;
+}
+.premium div{
+    padding-right: 20px;
 
+    height: 100%;
+    padding-top: 1rem;
+}
+.indexText{
+
+
+    max-width: 30rem;
+
+
+}
 
         
         
@@ -545,13 +668,28 @@ margin-right: 20%;
 }
 
 @media screen and (max-width: 600px){
-    #products-grid, #user-products-grid {
+    .products-grid, .user-products-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 
     #bare p{
     display: none;
 }
+#flex_mare{
+    display: none;
+}
+.premium div{
+    padding-right: 50px;
+
+    height: 100%;
+    padding-top: 1rem;
+}
+.products-premium-plus{
+    
+   
+
+}
+
 }
 
 
@@ -705,3 +843,92 @@ padding-top: 4px;
   }
 }
 
+
+
+/*formularulu*/
+*{
+     /*font-family: "Times New Roman";*/
+}
+.container_contacte{
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+    color: #404040 ;
+    padding: 10px;
+    font-size: 20px;
+
+}
+.container_contacte h2{
+    padding: 20px;
+    color: #1a1a1a;
+}
+#info_contacte{
+   
+
+    font-size: 15px;
+
+    padding-top: 30px;
+    padding: 10px;
+    padding-left: 10px;
+
+
+}
+
+#politica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 40px;
+
+    height: 80vh;
+
+    background: rgba(0,0,0,0.2);
+
+    border-radius: 2rem;
+}
+#politica p{
+    margin: 20px;
+
+}
+
+.q2{
+    display: flex;
+
+}
+.q1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+.q1 h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 50px;
+
+}
+.ship
+{
+margin: 5px;
+margin-top: 20px;
+}
+.ship img{
+    max-width: 380px; 
+    margin: 30px;
+}
+
+.st{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 30px;
+}

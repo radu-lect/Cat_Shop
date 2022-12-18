@@ -35,6 +35,8 @@ xhr.onload = function(){
 }
 xhr.send();
 
+
+
 // accesorii
 let accesorii = document.getElementById('accesorii');
 let productsArrayAces = [];
@@ -49,23 +51,23 @@ xhrAces.onload = function(){
 	let productsAces = xhrAces.response;
 	//ce adaugam pe pagina
 	accesorii.innerHTML = null;
-	productsAces.forEach(p=>{
-		productsArrayAces.push(p);
+	productsAces.forEach(a=>{
+		productsArrayAces.push(a);
 		let pElemAces = document.createElement('div');
 		pElemAces.classList.add('product');
 		pElemAces.innerHTML=`
 					
 							
 					
-							<img class="product-photo" src='${p.photo_url}'>
+							<img class="product-photo" src='${a.photo_url}'>
 			
-							<h2 class="product-name">${p.name}</h2>
+							<h2 class="product-name">${a.name}</h2>
 							
-							<div id="product-descriere">
-							<p class='product-price'><b>Price: </b>${p.price}</p>
+							<div class="product-descriere">
+							<p class='product-price'><b>Price: </b>${a.price}</p>
 						
-							<p class='product-desc'><b>Description:</b>${p.description}</p>
-							<button   onclick="addProductToCartAces(${p.id});" class="btn_buy" >Buy</button>
+							<p class='product-desc'><b>Description:</b>${a.description}</p>
+							<button   class="btn_buy" >Buy</button>
 
 							
 						`;
@@ -85,22 +87,11 @@ function addProductToCart(id){
 	}
 }
 
-function addProductToCartAces(id){
-	xhrAces.open('GET',`${url}/accesorii/${id}`);
-	xhrAces.responseType = 'json';
-	xhrAces.onload = function(){
-
-	}
-}
-
-//functia pt adaugarea in cart
-
 function addProductToCart(id){
 	let product = productsArray.find(function(p){
 			return p.id == id;
 	})
 	cart.push(product);
-
 	drawCartProduct();
 
 	localStorage.setItem("cart",JSON.stringify(cart));
@@ -108,6 +99,15 @@ function addProductToCart(id){
 
 
 }
+function addProductToCartAces(id){
+	xhrAces.open('GET',`${url}/accesorii/${id}`);
+	xhrAces.responseType = 'json';
+	xhrAces.onload = function(){
+console.log("merge 1");
+
+	}
+}
+
 function addProductToCartAces(id){
 	let productAces = productsArray.find(function(p){
 			return p.id == id;
@@ -117,8 +117,6 @@ function addProductToCartAces(id){
 	drawCartProduct();
 
 	localStorage.setItem("cart",JSON.stringify(cart));
-    
-
 
 }
 
@@ -220,27 +218,71 @@ closeBtn.addEventListener("click", () => {
 
 }
 
-// const deleteBtn_BAll =document.getElementById("deleteBtn_BAll");
-// const closeBtn_BAll = document.getElementById('closeBtn_BAll');
-// const notification_BAll = document.getElementById("notification_BAll");
+
+
+// hide si show shop
+
+let btnScrollProd = document.querySelector(".prod");
+let btnScrollAces = document.querySelector(".aces");
+
+let scrollAllProd = document.querySelector(".scroll_all_prod");
+let scrollAllAces = document.querySelector(".scroll_all_aces");
+
+
+$(document).ready(function(){
+ 
+     let is = true;
+$(scrollAllAces).hide();
+$(btnScrollProd).hide();
+
+     $(btnScrollProd).click(function(){
+     if(is){
+     		$(scrollAllProd).show(200);
+     		$(scrollAllAces).hide(200);
+     		$(btnScrollProd).hide(200);
+     		$(btnScrollAces).show(200);
 
 
 
-// function addNotif_BuyAll(){
-// 	console.log("merge");
-// 	deleteBtn_BAll.addEventListener("click", () => {
-//   notification_BAll.classList.add("notification-show");
-//   back_notif.classList.add("back_inactive");
-// });
-
-// closeBtn_BAll.addEventListener("click", () => {
-//   notification_BAll.classList.remove("notification-show");
-//   back_notif.classList.remove("back_inactive");
-
-// });
-
-// }
+     		is =!is;
+     }else{
+     		$(scrollAllProd).show(200);
+     		$(scrollAllAces).hide(200);
+     		$(btnScrollProd).hide(200);
+     		$(btnScrollAces).show(200);
 
 
+     		is=!is;
+     		
+     }
+	});
+});
+
+$(document).ready(function(){
+ 
+     let isi = true;
+
+     $(btnScrollAces).click(function(){
+     if(isi){
+     		$(scrollAllAces).show(200);
+     		$(scrollAllProd).hide(200);
+     		$(btnScrollAces).hide(200);
+     		$(btnScrollProd).show(200);
 
 
+
+
+     		isi =!isi;
+     }else{
+     		$(scrollAllAces).show(200);
+     		$(scrollAllProd).hide(200);
+     		$(btnScrollAces).hide(200);
+     		$(btnScrollProd).show(200);
+
+
+
+     		isi =!isi;
+     		
+     }
+	});
+});

@@ -2,31 +2,31 @@
     "users": [
         {
             "id": 1,
-            "name": "Andriy",
+            "name": "Radu",
             "sirname": "Moskalenko",
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/photo.png",
+            "photo_url": "https://raw.githubusercontent.comradu-lect/Cat_Shop/main/img/users2.png",
             "balance": 1500
         },
         {
             "id": 2,
-            "name": "Yuriy",
+            "name": "Dog",
             "sirname": "Berezovchuk",
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/cat1.png",
+            "photo_url": "https://raw.githubusercontent.comradu-lect/Cat_Shop/main/img/users1.png",
             "balance": 5790
         },
         {
             "id": 3,
             "name": "Cat",
             "sirname": "Egyptian",
-            "photo_url": "https://raw.githubusercontent.com/RobocodeSchool/marketplace/main/img/cat2.jpg",
-            "balance": 0
+            "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/img/users3.png",
+            "balance": 1000
         }
     ],
       "premiumProd":[
         {
             "id": 1,
-            "name": "Cat Premium",
-            "description": "Just a cat but better.",
+            "name": "Premium Cat",
+            "description": " Just a cat but better.",
             "price": 1000,
             "author_id": 1,
             "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/premiumCat.png"

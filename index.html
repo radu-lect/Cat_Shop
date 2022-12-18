@@ -13,12 +13,11 @@
 
 
 <!-- menu -->
-<nav >
+<nav  style="font-size: 20px;">
 	<a onClick="ul(0)" href="index.html"> Home </a>
 	<a onClick="ul(1)" href="shop.html" id="cat_shop"> Shop </a>
-	<a onClick="ul(2)" href="#"> cart </a>
-	<a onClick="ul(3)" href="#"> ceva  </a>
-	<a onClick="ul(4)" href="#"> Contact </a>
+	<a onClick="ul(2)" id="special_nav" href="aboutUs.html"> Shipping </a>
+	<a onClick="ul(4)" href="contacte.html"> Contact </a>
 
 </nav>
 
@@ -28,15 +27,34 @@
 <div class="inima sfarsit">
 	<img class="inima" src="img/inima2.png">
 </div> -->
+<div id="flex_mare">
 
-<main>
+<div class="indexText ListDiv">
+	
+	
+
+	<h3>What can you find in this Cat Shop?</h3>
+	<ul>
+
+		<li><a onClick="ul(1)" href="shop.html" > Cats </a></li>
+		<li><a onClick="ul(1)" href="shop.html" > Accesorii </a></li>
+		<li><a onClick="ul(1)" href="shop.html" > More Cats </a></li>
+	</ul>
+</div>
+
+
+<main id="display-plus">
 
 	<div id="products-premium" class="products-premium" >
 
 	</div>
+	<div class="products-premium-plus" >
+		<p>18.12.2022</p>
+		<p style="font-size: 30px;">Last day!</p>
+	</div>
 </main>
 
-
+</div>
 
 <div class="shop-produse">
 	<div class="cats"></div>
@@ -45,10 +63,10 @@
 
 
 <div class ="denumirile_shop prod"> 
-<h3>Pisicile </h3>
+<h3>Go To Cats </h3>
 </div>
 <div class ="denumirile_shop aces"> 
-<h3>Accesorii</h3>
+<h3>Go To Accesorii</h3>
 </div>
 
 <div class="scroll_all_prod">
@@ -98,9 +116,9 @@
 <footer>
 	<div id="bare">
 
-		<a href="#" class="footer_text">Termeni si conditiile.</a>
+		<a href="termenii.html" class="footer_text">Termeni si conditiile.</a>
 		<p class="footer_text">|</p>
-		<a href="#" class="footer_text">Politica site-ului.</a>	
+		<a href="Politica.html" class="footer_text">Politica site-ului.</a>	
 
 	</div>
 		<p class="footer_text">© 2022 Cat-Shop R.Moldova, Inc.</p>
