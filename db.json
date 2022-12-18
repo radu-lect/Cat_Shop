@@ -3,21 +3,22 @@
         {
             "id": 1,
             "name": "Radu",
-            "sirname": "Moskalenko",
+            "sirname": "Eu",
             "photo_url": "https://raw.githubusercontent.comradu-lect/Cat_Shop/main/img/users2.png",
             "balance": 1500
         },
         {
             "id": 2,
             "name": "Dog",
-            "sirname": "Berezovchuk",
+            "sirname": "Rus",
             "photo_url": "https://raw.githubusercontent.comradu-lect/Cat_Shop/main/img/users1.png",
             "balance": 5790
         },
         {
             "id": 3,
             "name": "Cat",
-            "sirname": "Egyptian",
+            "sirname": "Cat",
+
             "photo_url": "https://raw.githubusercontent.com/radu-lect/Cat_Shop/main/img/img/users3.png",
             "balance": 1000
         }
