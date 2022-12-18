@@ -56,14 +56,13 @@ xhrAces.onload = function(){
 	productsAces.forEach(p=>{
 		productsArrayAces.push(p);
 		let pElemAces = document.createElement('div');
-		pElemAces.classList.add('premium');
+		pElemAces.classList.add('product-row');
 		pElemAces.innerHTML=`
-					<div id="pAndImg">
-							<p>You need this NOW!</p>
+					
+							
 					
 							<img class="product-photo" src='${p.photo_url}'>
-					</div>
-					<div>	
+			
 							<h2 class="product-name">${p.name}</h2>
 							
 							<div id="product-descriere">
@@ -72,8 +71,7 @@ xhrAces.onload = function(){
 						<br>
 						
 							<p class='product-desc'><b>Description:</b>${p.description}</p>
-							</div>
-					</div>		
+							
 						`;
 					accesorii.append(pElemAces);
 
@@ -120,15 +118,93 @@ xhr.onload = function(){
 }
 xhr.send();
 
-// scroll fc
+// scroll btn
 
  function leftScroll() {
-        const left = document.querySelector(".products-row");
+        const left = document.querySelector("#products");
         left.scrollBy(250, 0);
       }
       function rightScroll() {
-        const right = document.querySelector(".products-row");
+        const right = document.querySelector("#products");
+        right.scrollBy(-250, 0);
+      }
+
+// accesorii
+ function leftScrollAces() {
+        const left = document.querySelector("#accesorii");
+        left.scrollBy(250, 0);
+      }
+      function rightScrollAces() {
+        const right = document.querySelector("#accesorii");
         right.scrollBy(-250, 0);
       }
 
 
+
+// btn scoll functionalitate
+
+let btnScrollProd = document.querySelector(".prod");
+let btnScrollAces = document.querySelector(".aces");
+
+let scrollAllProd = document.querySelector(".scroll_all_prod");
+let scrollAllAces = document.querySelector(".scroll_all_aces");
+
+
+
+$(document).ready(function(){
+ 
+     let is = true;
+$(scrollAllAces).hide();
+$(btnScrollProd).hide();
+
+     $(btnScrollProd).click(function(){
+     if(is){
+     		$(scrollAllProd).show(200);
+     		$(scrollAllAces).hide(200);
+     		$(btnScrollProd).hide(200);
+     		$(btnScrollAces).show(200);
+
+
+
+     		is =!is;
+     }else{
+     		$(scrollAllProd).show(200);
+     		$(scrollAllAces).hide(200);
+     		$(btnScrollProd).hide(200);
+     		$(btnScrollAces).show(200);
+
+
+     		is=!is;
+     		
+     }
+	});
+});
+
+$(document).ready(function(){
+ 
+     let isi = true;
+
+     $(btnScrollAces).click(function(){
+     if(isi){
+     		$(scrollAllAces).show(200);
+     		$(scrollAllProd).hide(200);
+     		$(btnScrollAces).hide(200);
+     		$(btnScrollProd).show(200);
+
+
+
+
+     		isi =!isi;
+     }else{
+     		$(scrollAllAces).show(200);
+     		$(scrollAllProd).hide(200);
+     		$(btnScrollAces).hide(200);
+     		$(btnScrollProd).show(200);
+
+
+
+     		isi =!isi;
+     		
+     }
+	});
+});

@@ -35,10 +35,60 @@ xhr.onload = function(){
 }
 xhr.send();
 
+// accesorii
+let accesorii = document.getElementById('accesorii');
+let productsArrayAces = [];
+let xhrAces = new XMLHttpRequest();
+let urlAces = 'https://my-json-server.typicode.com/radu-lect/Cat_Shop';
+//verificarea prin punerea in browser
+// 'https://my-json-server.typicode.com/#nume/#proiect_nume'
+
+xhrAces.open('GET', urlAces+'/accesorii');
+xhrAces.responseType = 'json';
+xhrAces.onload = function(){
+	let productsAces = xhrAces.response;
+	//ce adaugam pe pagina
+	accesorii.innerHTML = null;
+	productsAces.forEach(p=>{
+		productsArrayAces.push(p);
+		let pElemAces = document.createElement('div');
+		pElemAces.classList.add('product');
+		pElemAces.innerHTML=`
+					
+							
+					
+							<img class="product-photo" src='${p.photo_url}'>
+			
+							<h2 class="product-name">${p.name}</h2>
+							
+							<div id="product-descriere">
+							<p class='product-price'><b>Price: </b>${p.price}</p>
+						
+							<p class='product-desc'><b>Description:</b>${p.description}</p>
+							<button   onclick="addProductToCartAces(${p.id});" class="btn_buy" >Buy</button>
+
+							
+						`;
+					accesorii.append(pElemAces);
+
+	})
+}
+xhrAces.send();
+
+
+
 function addProductToCart(id){
 	xhr.open('GET',`${url}/products/${id}`);
 	xhr.responseType = 'json';
 	xhr.onload = function(){
+
+	}
+}
+
+function addProductToCartAces(id){
+	xhrAces.open('GET',`${url}/accesorii/${id}`);
+	xhrAces.responseType = 'json';
+	xhrAces.onload = function(){
 
 	}
 }
@@ -50,6 +100,19 @@ function addProductToCart(id){
 			return p.id == id;
 	})
 	cart.push(product);
+
+	drawCartProduct();
+
+	localStorage.setItem("cart",JSON.stringify(cart));
+    
+
+
+}
+function addProductToCartAces(id){
+	let productAces = productsArray.find(function(p){
+			return p.id == id;
+	})
+	cart.push(productAces);
 
 	drawCartProduct();
 

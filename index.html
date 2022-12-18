@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>index</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	   
 
 	<link rel="stylesheet" type="text/css" href="style1.css">
@@ -9,16 +10,6 @@
 <body >
 <div  id="back_inactiv">	
 
-
-	<!-- reclama -->
-<div class="reclama">
-
-	<p class="reclama_content">New cat NOW, 100% NOT free! Get the promotion now!</p>
-<div class="btn_reclama_all">
-	<button class="btn_reclama" id="delete" onclick="addNotif_Reclama();"><img src="img/x.png"></button>
-</div>
-
-</div>
 
 
 <!-- menu -->
@@ -31,28 +22,17 @@
 
 </nav>
 
-
-
-<!-- menu -->
-<!-- 
-	<header>
-
-		<h1>Home</h1>
-
-	</header> -->
-<!-- <main>	
-<div class="home-start">
-	<div id="promotie">
-		
-	</div>
+<!-- <div class="inima start">
+	<img class="inima" src="img/inima1.png">
 </div>
-</main> -->
-
+<div class="inima sfarsit">
+	<img class="inima" src="img/inima2.png">
+</div> -->
 
 <main>
 
 	<div id="products-premium" class="products-premium" >
-		
+
 	</div>
 </main>
 
@@ -64,17 +44,21 @@
 </div>	
 
 
-<div class ="denumirile_shop"> 
+<div class ="denumirile_shop prod"> 
 <h3>Pisicile </h3>
 </div>
+<div class ="denumirile_shop aces"> 
+<h3>Accesorii</h3>
+</div>
 
+<div class="scroll_all_prod">
 <div class="cover">
     <button class="left btnScroll" onclick="rightScroll()" ><<</button>
    <div class="scroll-images">
            <!-- child elements -->
    
 <main>
-	<div id="products" class="products-row">
+	<div id="products" class="products-row" >
 		
 	</div>
 </main>
@@ -84,18 +68,32 @@
 </div>
 </div>
 
+</div>
 
+<!-- acccesorii -->
+<!-- <div class ="denumirile_shop aces"> 
+<h3>Accesorii</h3>
+</div> -->
+
+<div class="scroll_all_aces">
+
+<div class="cover">
+    <button class="left btnScroll" onclick="rightScrollAces()" ><<</button>
+
+   <div class="scroll-images" >
 
 <main>
-	<div id="accesorii" >
+	<div id="accesorii" class="products-row">
 		
 	</div>
 </main>
 
+  <button class="right btnScroll" onclick="leftScrollAces()" >>></button>
+</div>
+</div>
+</div>
 
-
-
-
+<!-- footer -->
 <hr>
 <footer>
 	<div id="bare">
@@ -114,18 +112,6 @@
 
 </div>
 
-<!-- notificarii -->
-	<div id="notification_anunt" class="notification anunt">
-		<img class="exlamare_img" src="img/!.png">
-			<div class="p_notification_edit">
-				<p class="p_notification">Politica site-ului nu tolereaza stergerea reclamelor.</p>
-				<p class="politica_site">Pentru mai multe detali verificati: <a href="#">politica site-ului.</a></p>
-			</div>
-<div class="btn_reclama_close">
-<button id="close" class="notification_close" ><img src="img/2x.png"></button>
-</div>
-			
-	</div>
 </body>
 
 	
